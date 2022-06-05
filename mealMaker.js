@@ -23,8 +23,11 @@ const menu = {
     }
 };
 
-menu.meal = "Pizza";
-menu.price = 9;
+const meals = ["Pizza", "Steak", "Pie", "Roast", "Moussaka", "Lasagne", "Tacos"];
+const prices = [9, 13, 11, 14, 9, 10, 9];
+const random = Math.floor(Math.random() * prices.length)
 
+menu.meal = meals[random];
+menu.price = prices[random];
 
 console.log(menu.todaysSpecial);
