@@ -52,23 +52,28 @@ const shuffle = (array) => {
     return array;
 }
 
-meals = shuffle(meals);
+let week = ["Week 1", "Week 2", "Week 3", "Week 4"];
 const dayOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
 //I've created a for loop to go through the new shuffled array.
-for (let i = 0; i < meals.length; i++) {
-    //In here I'm saying that if the number of meals is equal to the week days, the weekly menu will be printed.
-    if (meals.length === dayOfTheWeek.length) {
-        menu.meal = meals[i].name;
-        menu.price = meals[i].price;
-        console.log(dayOfTheWeek[i] + menu.todaysSpecial);
-        //If the meals are less, it will print how many need to be added.
-    } else if (meals.length < dayOfTheWeek.length) {
-        console.log(`You need to add ${Math.abs(meals.length - dayOfTheWeek.length)} meal(s) to the list!!!`)
-        break;
-        //If the meals are more, than it will print how many need to be removed.
-    } else if (meals.length > dayOfTheWeek.length) {
-        console.log(`You need to remove ${Math.abs(meals.length - dayOfTheWeek.length)} meal(s) from the list!!!`)
-        break;
+
+for (let w = 0; w < week.length; w++) {
+    console.log("\n" + week[w])
+    meals = shuffle(meals);
+    for (let i = 0; i < meals.length; i++) {
+        //In here I'm saying that if the number of meals is equal to the week days, the weekly menu will be printed.
+        if (meals.length === dayOfTheWeek.length) {
+            menu.meal = meals[i].name;
+            menu.price = meals[i].price;
+            console.log(dayOfTheWeek[i] + menu.todaysSpecial);
+            //If the meals are less, it will print how many need to be added.
+        } else if (meals.length < dayOfTheWeek.length) {
+            console.log(`You need to add ${Math.abs(meals.length - dayOfTheWeek.length)} meal(s) to the list!!!`)
+            break;
+            //If the meals are more, than it will print how many need to be removed.
+        } else if (meals.length > dayOfTheWeek.length) {
+            console.log(`You need to remove ${Math.abs(meals.length - dayOfTheWeek.length)} meal(s) from the list!!!`)
+            break;
+        }
     }
 }

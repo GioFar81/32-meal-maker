@@ -25,4 +25,9 @@ In this version, I first planned to have a random daily meal that was able to be
 achieve this, I looked for ways to remove the selected item from the list and then, when the list was empty, reset it, but I couldn't find
 the way, so I ended up having the app creating a weekly list for the meals of the day, the log shows the weekly list combined with the
 appropriate day of the week, and it also shows a warning message if the number of meals are more or less than 7 stating how many meals need
-to be added or removed. 
+to be added or removed.
+
+## Version 05.
+
+Added a variable with the week list, and then changed the loop so that the same weekly menu gets shuffled and logged 4 times, right below
+the week number. 
