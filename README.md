@@ -30,4 +30,9 @@ to be added or removed.
 ## Version 05.
 
 Added a variable with the week list, and then changed the loop so that the same weekly menu gets shuffled and logged 4 times, right below
-the week number. 
+the week number.
+
+## Version 06.
+
+Added 3 more arrays with the weekly menu list, for a total of 4. Now the app takes each of the 4 arrays and shuffles them before logging the
+result.
